@@ -8,3 +8,6 @@ Route::get('/', function () {
 });
 
 Route::resource('escuelas', EscuelaController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
