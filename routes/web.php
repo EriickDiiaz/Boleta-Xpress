@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EscuelaController;
 use App\Http\Controllers\AdministracionController;
+use App\Http\Controllers\EstudianteController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,12 +16,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 // Rutas protegidas (requieren autenticación)
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
     Route::resource('escuelas', EscuelaController::class);
+    Route::resource('estudiantes', EstudianteController::class);
 
     Route::prefix('administracion')->group(function () {
         Route::get('/', [AdministracionController::class, 'index'])->name('administracion.index');
