@@ -21,7 +21,7 @@
         
     <!-- Botones Agregar -->   
     <div class="d-flex ">
-        <a href="{{ route('escuelas.create') }}" class="btn btn-custom1 mb-3">
+        <a href="{{ route('escuelas.create') }}" class="btn btn-outline-dark mb-3">
             <i class="fas fa-plus"></i> Crear Nueva Escuela
         </a>    
     </div>
@@ -46,7 +46,7 @@
                 <td>{{ $escuela->dea }}</td>
                 <td>{{ $escuela->director }}</td>
                 <td>
-                    <a href="{{ route('escuelas.show', $escuela->id) }}" class="btn btn-sm btn-outline-light">
+                    <a href="{{ route('escuelas.show', $escuela->id) }}" class="btn btn-sm btn-outline-dark">
                         <i class="fas fa-eye"></i>
                     </a>
                     
@@ -98,8 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Sí, eliminar',
                 cancelButtonText: 'Cancelar',
-                background: '#333',
-                color: '#fff'
             }).then((result) => {
                 if (result.isConfirmed) {
                     form.submit();

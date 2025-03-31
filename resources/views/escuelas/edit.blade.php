@@ -67,10 +67,10 @@
                             @endif
                         </div>                        
                         <div class="d-flex justify-content-between mb-3">
-                            <a href="{{ route('escuelas.index') }}" class="btn btn-danger">
+                            <a href="{{ route('escuelas.index') }}" class="btn btn-outline-danger">
                                 <i class="fa-solid fa-delete-left me-2"></i>Regresar
                             </a>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-outline-primary">
                                 <i class="fas fa-school me-2"></i>Actualizar
                             </button>
                         </div>

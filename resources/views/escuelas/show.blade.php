@@ -24,10 +24,10 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between mb-3">
-                <a href="{{ route('escuelas.index') }}" class="btn btn-danger">
+                <a href="{{ route('escuelas.index') }}" class="btn btn-outline-danger">
                     <i class="fa-solid fa-delete-left me-2"></i>Regresar
                 </a>
-                <a href="{{ route('escuelas.edit', $escuela->id) }}" class="btn btn-primary">
+                <a href="{{ route('escuelas.edit', $escuela->id) }}" class="btn btn-outline-primary">
                     <i class="fas fa-edit me-2"></i>Modificar
                 </a>
             </div>
