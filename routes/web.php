@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EscuelaController;
 use App\Http\Controllers\AdministracionController;
+use App\Http\Controllers\BoletaController;
 use App\Http\Controllers\EstudianteController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +46,11 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/anos_escolares', [AdministracionController::class, 'crearAnoEscolar'])->name('anos_escolares.crear');
         Route::put('/anos_escolares/{ano_escolar}', [AdministracionController::class, 'actualizarAnoEscolar'])->name('anos_escolares.actualizar');
         Route::delete('/anos_escolares/{ano_escolar}', [AdministracionController::class, 'eliminarAnoEscolar'])->name('anos_escolares.eliminar');
+    });
+
+    // Rutas para Boletas
+    Route::prefix('estudiantes/{estudiante}')->group(function () {
+        Route::resource('boletas', BoletaController::class);
     });
     
 });
