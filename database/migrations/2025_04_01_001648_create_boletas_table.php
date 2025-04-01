@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('momento');
             $table->enum('tipo_boleta', ['descriptiva', 'calificativa'])->default('descriptiva');
             $table->text('observaciones')->nullable();
-            $table->enum('calificacion_general', ['A', 'B', 'C', 'D', 'E'])->nullable();            
+            $table->enum('calificacion_general', ['A', 'B', 'C', 'D', 'E'])->nullable();
+            $table->integer('calificacion_general_numerica')->nullable();
             $table->timestamps();
         });
     }

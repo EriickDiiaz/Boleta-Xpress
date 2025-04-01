@@ -17,6 +17,7 @@ class Boleta extends Model
         'proyecto',
         'observaciones',
         'calificacion_general',
+        'calificacion_general_numerica',
     ];
 
     public function estudiante()

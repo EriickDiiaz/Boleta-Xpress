@@ -77,10 +77,10 @@
             </div>
 
             <div class="d-flex justify-content-between mt-4">
-                <a href="{{ route('boletas.index', $estudiante) }}" class="btn btn-danger">
+                <a href="{{ route('boletas.index', $estudiante) }}" class="btn btn-outline-danger">
                     <i class="fa-solid fa-arrow-left me-2"></i>Regresar
                 </a>
-                <a href="{{ route('boletas.edit', [$estudiante, $boleta]) }}" class="btn btn-primary">
+                <a href="{{ route('boletas.edit', [$estudiante, $boleta]) }}" class="btn btn-outline-primary">
                     <i class="fas fa-edit me-2"></i>Editar
                 </a>
             </div>

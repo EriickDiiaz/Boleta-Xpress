@@ -159,13 +159,13 @@ class BoletaController extends Controller
 
         // Reglas específicas según el tipo de boleta
         if ($request->input('tipo_boleta') === 'descriptiva') {
-            $rules['calificaciones.*.descripcion'] = 'required|string';
+            $rules['calificaciones.*.descripcion'] = 'nullable|string';
         } else {
             // Para boletas calificativas
             if ($request->input('sistema_calificacion') === 'literal') {
-                $rules['calificaciones.*.calificacion_literal'] = 'required|in:A,B,C,D,E';
+                $rules['calificaciones.*.calificacion_literal'] = 'nullable|in:A,B,C,D,E';
             } else {
-                $rules['calificaciones.*.calificacion_numerica'] = 'required|numeric|min:0|max:20';
+                $rules['calificaciones.*.calificacion_numerica'] = 'nullable|numeric|min:0|max:20';
             }
         }
 

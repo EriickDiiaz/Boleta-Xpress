@@ -34,7 +34,7 @@
                 <td>{{ $estudiante->grado->nombre }}</td>
                 <td>{{ $estudiante->seccion->nombre }}</td>
                 <td>
-                    <a href="{{ route('boletas.index', $estudiante->id) }}" class="btn btn-sm btn-outline-info" title="Ver calificaciones">
+                    <a href="{{ route('boletas.index', $estudiante->id) }}" class="btn btn-sm btn-outline-warning" title="Ver calificaciones">
                         <i class="fas fa-clipboard-list"></i>
                     </a>
                     <a href="{{ route('estudiantes.show', $estudiante->id) }}" class="btn btn-sm btn-outline-dark">
