@@ -48,9 +48,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/anos_escolares/{ano_escolar}', [AdministracionController::class, 'eliminarAnoEscolar'])->name('anos_escolares.eliminar');
     });
 
-    // Rutas para Boletas
-    Route::prefix('estudiantes/{estudiante}')->group(function () {
+        // Rutas para Boletas
+        Route::prefix('estudiantes/{estudiante}')->group(function () {
         Route::resource('boletas', BoletaController::class);
+        Route::get('boletas/{boleta}/pdf', [App\Http\Controllers\BoletaPDFController::class, 'generarPDF'])->name('boletas.pdf');
     });
     
 });
