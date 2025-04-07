@@ -80,7 +80,7 @@
                 <a href="{{ route('boletas.index', $estudiante) }}" class="btn btn-outline-danger">
                     <i class="fa-solid fa-arrow-left me-2"></i>Regresar
                 </a>
-                <a href="{{ route('boletas.pdf', [$estudiante, $boleta]) }}" class="btn btn-success" target="_blank">
+                <a href="{{ route('boletas.pdf', [$estudiante, $boleta]) }}" class="btn btn-outline-dark" target="_blank">
                     <i class="fas fa-file-pdf me-2"></i>Generar PDF
                 </a>
                 <a href="{{ route('boletas.edit', [$estudiante, $boleta]) }}" class="btn btn-outline-primary">
